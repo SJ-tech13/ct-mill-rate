@@ -9,13 +9,15 @@ Github: CT-Mill-Rate-Project-Java
 
 *Code for Connecticut, Code for America*
 
-*Project built on IntelliJ IDEA/JavaFX Java8. To set up, .java files in src folder and CSVs outside of src*
-*Please note that I am still learning the language, so there may be errors in the files*
+*Project built on IntelliJ IDEA/JavaFX Java8. To set up, .java files in src folder and CSVs outside of src.*
+
+*Please note that I am still learning the language, so there may be errors in the files.*
 
 <b><a name="august13">2019-Aug-13</a></b>
 
 - [x] Create BufferedReader to read CSV lines
-- [x] Added first level of HashMap to add key (String) municipality name and return mill rate value.
+- [x] Add first level of HashMap to add key (String) municipality name and return mill rate value.
+- [ ] Add another layer to the HashMap to search by year key and municipality key -> mill rate.
 - [ ] Incorporate JSON (XML?)
 - [ ] Plot graphs
 
