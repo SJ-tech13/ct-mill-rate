@@ -1,6 +1,8 @@
 # CT-Mill-Rate-Project-Java
 
-*Project built on IntelliJ IDEA/JavaFX Java8. To set up, .java files in src folder and CSVs outside of src*
+*Project built on IntelliJ IDEA/JavaFX Java8. To set up, .java files in src folder and CSVs outside of src.*
+
+*Please note that I am still learning the language, so there may be errors in the files.*
 
 **Primary data sources**
 
@@ -12,7 +14,7 @@ https://data.ct.gov/browse?category=Local%20Government
 
 https://github.com/jakekara/ct-fiscal-indicators-csv.git
 
-*July 25 2019------------*
+<b>2019-Jul-25</b>
 
 First Code for Connecticut meetup event at Upward Hartford, project proposal phase. Brigade led by Johnathan Payne and Ellen Last of Tech Talent South. "Project Mill Rate" proposed by Welley Loc. Originally a personal project, but let's see where this goes with more manpower!
 
