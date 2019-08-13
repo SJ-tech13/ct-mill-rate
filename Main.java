@@ -2,32 +2,44 @@ import javafx.application.Application;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
-public class Main{
-    public static void main(String[] args) {
+public class Main {
+
+    public Map<String, String> getMillRate () {
+
+// START OF CSV READER
 
         List<List<String>> data = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader("2019 - FORMATTED.csv"));
+
+        Map<String, String> map = new HashMap<>(); // map that returns string, string (for municipality, mill rate  later) key, value
+
+
+        try (BufferedReader b = new BufferedReader(new FileReader("2019 - FORMATTED.csv")) // Reads CSV file
         ) {
             String line;
-            while ((line = br.readLine()) != null) {
-
-                String[] item = line.split(",");
-                List row = Arrays.asList(item);
-                data.add(row);
-                // System.out.println(row);
+            while ((line = b.readLine()) != null) { // BufferedReader reads line in CSV and boolean returns true if line is not empty
+                String[] item = line.split(","); // Splits elements that are separated by commas and put them into a String array
+                List row = Arrays.asList(item); // Cast item array into a list interface called row ["a","b","c",]
+                data.add(row); // Adds new row list to data Arraylist at each loop [['a', 'b', 'c', 'd'],....['a3', 'b3', 'c3', 'd3']]
+                map.put(String.valueOf(row.get(2)), String.valueOf(row.get(3))); // Puts the key string (municipality) and value (mill rate) string
             }
-            System.out.println(data.get(8));
-            System.out.println("Municipality: " + data.get(8).get(2)); // reads municipality #7, index [8] and the name at index[2]
-            System.out.println("Mill rate: " + data.get(8).get(3));
+        } catch (Exception exception) {}
+        return map;
 
-        } catch (Exception exception) { }
+    }
+// END CSV READER
 
+    public static void main(String[] args) {
+
+        Main inquire = new Main();
+
+        System.out.println(inquire.getMillRate().get("Glastonbury"));
+
+//        WINDOW LAUNCHER, DO NOT DELETE
         Application.launch(MillRateApplication.class, args);
+
+
 
     }
 }
-
